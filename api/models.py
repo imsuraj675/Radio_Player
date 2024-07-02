@@ -15,9 +15,9 @@ class Room(models.Model):
     room_code = models.CharField(
         max_length=8, default=gen_code, unique=True
     )
-    host = models.CharField(max_length=8, unique=True)
+    host = models.CharField(unique=True)
     guest_can_pause = models.BooleanField(null=False, default=False)
-    lang = models.CharField(max_length=50,default='english')
+    lang = models.CharField(max_length=50,default='hindi')
     tag = models.CharField(max_length=50,null=True)
     current_station_index = models.IntegerField(default=0)
     current_station = models.CharField(max_length=100,null=True)
