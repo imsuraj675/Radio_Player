@@ -1,10 +1,27 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "music_room/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "disDir": "staticfiles"
+      }
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "music_room/wsgi .py" }]
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "music_room/wsgi .py"
+    }
+  ]
 }
