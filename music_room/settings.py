@@ -89,7 +89,7 @@ DATABASES = {
     }
 }
 
-# DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
@@ -132,7 +132,7 @@ STATICFILES_DIRS = (
     path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = path.join(BASE_DIR, 'staticfiles', 'static')
+STATIC_ROOT = path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
