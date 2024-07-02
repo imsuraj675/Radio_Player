@@ -29,7 +29,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = eval(environ.get('DEBUG'))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.56.1','192.168.0.196','192.168.47.163']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
